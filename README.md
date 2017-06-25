@@ -1,4 +1,8 @@
 
+<p align="center">
+<a href="https://travis-ci.org/mx-in/Yujian"><img src="https://img.shields.io/travis/mx-in/Yujian/master.svg"></a>
+<a herf="https://codecov.io/gh/mx-in/Yujian"><img src="https://codecov.io/gh/mx-in/Yujian/branch/master/graph/badge.svg"/></a>
+</p>
 
 # O Me! O Life!
 
