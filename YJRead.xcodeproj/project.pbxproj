@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46018A3E22817989000D7717 /* Artical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46018A3D22817989000D7717 /* Artical.swift */; };
 		4640A8771EFF7E1E00258CDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4640A8761EFF7E1E00258CDE /* AppDelegate.swift */; };
 		4640A8791EFF7E1E00258CDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4640A8781EFF7E1E00258CDE /* ViewController.swift */; };
 		4640A87C1EFF7E1E00258CDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4640A87A1EFF7E1E00258CDE /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46018A3D22817989000D7717 /* Artical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artical.swift; sourceTree = "<group>"; };
 		4640A8731EFF7E1E00258CDE /* YJRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4640A8761EFF7E1E00258CDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4640A8781EFF7E1E00258CDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				4640A87F1EFF7E1E00258CDE /* LaunchScreen.storyboard */,
 				4640A8821EFF7E1E00258CDE /* Info.plist */,
 				46D59543227866110033FA56 /* WebService.swift */,
+				46018A3D22817989000D7717 /* Artical.swift */,
 			);
 			path = YJRead;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46018A3E22817989000D7717 /* Artical.swift in Sources */,
 				4640A8791EFF7E1E00258CDE /* ViewController.swift in Sources */,
 				46D59544227866110033FA56 /* WebService.swift in Sources */,
 				4640A8771EFF7E1E00258CDE /* AppDelegate.swift in Sources */,
