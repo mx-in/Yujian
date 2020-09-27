@@ -24,7 +24,7 @@ class DataParseTests: XCTestCase {
     }
     
     func testDataParse() throws {
-        webServerce.loadMock(Artical.today, testJsonData: jsonStr) { result in
+        webServerce.loadMock(ArticalResource.today, testJsonData: jsonStr) { result in
             XCTAssertTrue(result != nil, "get data failed")
             XCTAssertEqual(result?.data.date.prev, "20200908")
             XCTAssertEqual(result?.data.content.isEmpty, false)

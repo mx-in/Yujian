@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Artical: Codable {
+struct ArticalResource: Codable {
     struct ArticalData: Codable {
         struct ArticalDate: Codable {
             let curr: String
@@ -25,15 +25,14 @@ struct Artical: Codable {
     let data: ArticalData
 }
 
-extension Artical {
-    static var random: Resource<Artical> {
+extension ArticalResource {
+    static var random: Resource<ArticalResource> {
         let randomArticalURL = URL(string: "https://interface.meiriyiwen.com/article/random?dev=1")!
-        return Resource<Artical>(url: randomArticalURL)
+        return Resource<ArticalResource>(url: randomArticalURL)
     }
     
-    static var today: Resource<Artical> {
+    static var today: Resource<ArticalResource> {
         let todayAritcalURL = URL(string: "https://interface.meiriyiwen.com//article/today?dev=1")!
-        return Resource<Artical>(url: todayAritcalURL)
+        return Resource<ArticalResource>(url: todayAritcalURL)
     }
 }
-
