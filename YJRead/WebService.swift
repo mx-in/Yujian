@@ -32,4 +32,9 @@ final class WebService {
         }.resume()
     }
     
+    func loadMock<A>(_ resource: Resource<A>, testJsonData: String, completion: @escaping (A?) -> ()) {
+        let data = testJsonData.data(using: .utf8)
+        completion(data.flatMap(resource.parse))
+    }
+    
 }
