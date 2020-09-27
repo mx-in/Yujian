@@ -30,6 +30,14 @@ class DataParseTests: XCTestCase {
             XCTAssertEqual(result?.data.content.isEmpty, false)
         }
     }
+    
+    func testParagraphsGenerate() {
+        webServerce.loadMock(ArticalResource.today, testJsonData: jsonStr) { result in
+            let res =  result?.data.paragraphs()
+            XCTAssertNotEqual(res, nil)
+            XCTAssertEqual(res?.count, 2)
+        }
+    }
 
 
 }
