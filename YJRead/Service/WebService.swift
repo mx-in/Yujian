@@ -28,7 +28,9 @@ final class WebService {
     func load<A>(_ resource: Resource<A>, completion: @escaping (A?) -> ()) {
         URLSession.shared.dataTask(with: resource.url) { data, _, _ in
             let result = data.flatMap(resource.parse)
-            completion(result)
+            DispatchQueue.main.async {
+                completion(result)
+            }
         }.resume()
     }
     

@@ -19,16 +19,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        WebService().load(MRYWArticalResource.today) { result in
-            guard let artical = result else {
-                return
-            }
-            self.artical = artical
-            
-            DispatchQueue.main.async {
-                self.webView.loadHTMLString(artical.data.content, baseURL: Bundle.main.bundleURL)
-                self.title = artical.data.title
-            }
+        ArticalModelLoader().loadRandom { artical in
+            guard let artical = artical else { return }
+            self.headerView.setModel(artical)
+            self.webView.loadHTMLString(artical.paragraphs.first!, baseURL: Bundle.main.bundleURL)
         }
     }
     
