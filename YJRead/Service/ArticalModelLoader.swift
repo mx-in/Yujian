@@ -10,7 +10,7 @@ import Foundation
 
 final class ArticalModelLoader {
     
-    let webService = WebService()
+    var webService = WebService()
 
     func loadRandom(completion: @escaping (ArticalModel?) -> ()) {
         webService.load(MRYWArticalResource.random) { result in

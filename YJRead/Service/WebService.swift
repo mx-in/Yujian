@@ -25,7 +25,19 @@ extension Resource where A: Codable{
 
 final class WebService {
     
+    var isMock = false
+    var testJsonData: String?
+
     func load<A>(_ resource: Resource<A>, completion: @escaping (A?) -> ()) {
+        
+        if isMock {
+            guard let json = testJsonData else {
+                completion(nil)
+                return
+            }
+            loadMock(resource, testJsonData: json, completion: completion)
+        }
+        
         URLSession.shared.dataTask(with: resource.url) { data, _, _ in
             let result = data.flatMap(resource.parse)
             DispatchQueue.main.async {
