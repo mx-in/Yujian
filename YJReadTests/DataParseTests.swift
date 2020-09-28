@@ -24,7 +24,7 @@ class DataParseTests: XCTestCase {
     }
     
     func testDataParse() throws {
-        webServerce.loadMock(ArticalResource.today, testJsonData: jsonStr) { result in
+        webServerce.loadMock(MRYWArticalResource.today, testJsonData: jsonStr) { result in
             XCTAssertTrue(result != nil, "get data failed")
             XCTAssertEqual(result?.data.date.prev, "20200908")
             XCTAssertEqual(result?.data.content.isEmpty, false)
@@ -32,7 +32,7 @@ class DataParseTests: XCTestCase {
     }
     
     func testParagraphsGenerate() {
-        webServerce.loadMock(ArticalResource.today, testJsonData: jsonStr) { result in
+        webServerce.loadMock(MRYWArticalResource.today, testJsonData: jsonStr) { result in
             let res =  result?.data.paragraphs()
             XCTAssertNotEqual(res, nil)
             XCTAssertEqual(res?.count, 2)

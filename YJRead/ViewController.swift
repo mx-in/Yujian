@@ -13,12 +13,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
     
-    var artical: ArticalResource?
+    var artical: MRYWArticalResource?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        WebService().load(ArticalResource.today) { result in
+        WebService().load(MRYWArticalResource.today) { result in
             guard let artical = result else {
                 return
             }
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didClickRandomBtn(_ sender: Any) {
-        WebService().load(ArticalResource.random) { result in
+        WebService().load(MRYWArticalResource.random) { result in
                    guard let artical = result else {
                        return
                    }

@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct ArticalDate: Codable {
+struct MRYWArticalDate: Codable {
     let curr: String
     let prev: String
     let next: String
 }
 
-struct ArticalData: Codable {
-    let date: ArticalDate
+struct MRYWArticalData: Codable {
+    let date: MRYWArticalDate
     let author: String
     let title: String
     let digest: String
@@ -23,23 +23,23 @@ struct ArticalData: Codable {
     let wc: Int
 }
 
-struct ArticalResource: Codable {
-    let data: ArticalData
+struct MRYWArticalResource: Codable {
+    let data: MRYWArticalData
 }
 
-extension ArticalResource {
-    static var random: Resource<ArticalResource> {
+extension MRYWArticalResource {
+    static var random: Resource<MRYWArticalResource> {
         let randomArticalURL = URL(string: "https://interface.meiriyiwen.com/article/random?dev=1")!
-        return Resource<ArticalResource>(url: randomArticalURL)
+        return Resource<MRYWArticalResource>(url: randomArticalURL)
     }
     
-    static var today: Resource<ArticalResource> {
+    static var today: Resource<MRYWArticalResource> {
         let todayAritcalURL = URL(string: "https://interface.meiriyiwen.com//article/today?dev=1")!
-        return Resource<ArticalResource>(url: todayAritcalURL)
+        return Resource<MRYWArticalResource>(url: todayAritcalURL)
     }
 }
 
-extension ArticalData {
+extension MRYWArticalData {
     func paragraphs() -> [String]? {
         if content.isEmpty {
             return nil

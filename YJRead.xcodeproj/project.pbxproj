@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46018A3E22817989000D7717 /* ArticalResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46018A3D22817989000D7717 /* ArticalResource.swift */; };
+		46018A3E22817989000D7717 /* MRYWArticalResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46018A3D22817989000D7717 /* MRYWArticalResource.swift */; };
 		4640A8771EFF7E1E00258CDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4640A8761EFF7E1E00258CDE /* AppDelegate.swift */; };
 		4640A8791EFF7E1E00258CDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4640A8781EFF7E1E00258CDE /* ViewController.swift */; };
 		4640A87C1EFF7E1E00258CDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4640A87A1EFF7E1E00258CDE /* Main.storyboard */; };
@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		46018A3D22817989000D7717 /* ArticalResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticalResource.swift; sourceTree = "<group>"; };
+		46018A3D22817989000D7717 /* MRYWArticalResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRYWArticalResource.swift; sourceTree = "<group>"; };
 		4640A8731EFF7E1E00258CDE /* YJRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4640A8761EFF7E1E00258CDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4640A8781EFF7E1E00258CDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,16 +81,32 @@
 		4640A8751EFF7E1E00258CDE /* YJRead */ = {
 			isa = PBXGroup;
 			children = (
+				465420AF252195C60059AA5C /* Service */,
+				465420AE252195B60059AA5C /* Model */,
 				4640A8761EFF7E1E00258CDE /* AppDelegate.swift */,
 				4640A8781EFF7E1E00258CDE /* ViewController.swift */,
 				4640A87A1EFF7E1E00258CDE /* Main.storyboard */,
 				4640A87D1EFF7E1E00258CDE /* Assets.xcassets */,
 				4640A87F1EFF7E1E00258CDE /* LaunchScreen.storyboard */,
 				4640A8821EFF7E1E00258CDE /* Info.plist */,
-				46D59543227866110033FA56 /* WebService.swift */,
-				46018A3D22817989000D7717 /* ArticalResource.swift */,
 			);
 			path = YJRead;
+			sourceTree = "<group>";
+		};
+		465420AE252195B60059AA5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				46018A3D22817989000D7717 /* MRYWArticalResource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		465420AF252195C60059AA5C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				46D59543227866110033FA56 /* WebService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		46BF6DF6252096AB00D4060C /* YJReadTests */ = {
@@ -205,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46018A3E22817989000D7717 /* ArticalResource.swift in Sources */,
+				46018A3E22817989000D7717 /* MRYWArticalResource.swift in Sources */,
 				4640A8791EFF7E1E00258CDE /* ViewController.swift in Sources */,
 				46D59544227866110033FA56 /* WebService.swift in Sources */,
 				4640A8771EFF7E1E00258CDE /* AppDelegate.swift in Sources */,
