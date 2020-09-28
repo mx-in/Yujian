@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		46018A3E22817989000D7717 /* MRYWArticalResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46018A3D22817989000D7717 /* MRYWArticalResource.swift */; };
+		461F642125223A3500F2AFA6 /* YJTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461F642025223A3500F2AFA6 /* YJTextView.swift */; };
 		4640A8771EFF7E1E00258CDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4640A8761EFF7E1E00258CDE /* AppDelegate.swift */; };
 		4640A8791EFF7E1E00258CDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4640A8781EFF7E1E00258CDE /* ViewController.swift */; };
 		4640A87C1EFF7E1E00258CDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4640A87A1EFF7E1E00258CDE /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		46018A3D22817989000D7717 /* MRYWArticalResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRYWArticalResource.swift; sourceTree = "<group>"; };
+		461F642025223A3500F2AFA6 /* YJTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJTextView.swift; sourceTree = "<group>"; };
 		4640A8731EFF7E1E00258CDE /* YJRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4640A8761EFF7E1E00258CDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4640A8781EFF7E1E00258CDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				465EBC5A2521F9C500BFC0E8 /* MainHeaderView.swift */,
 				465EBC5E2521FADA00BFC0E8 /* MainHeaderView.xib */,
+				461F642025223A3500F2AFA6 /* YJTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461F642125223A3500F2AFA6 /* YJTextView.swift in Sources */,
 				465EBC4D2521982E00BFC0E8 /* ArticalModel.swift in Sources */,
 				46018A3E22817989000D7717 /* MRYWArticalResource.swift in Sources */,
 				4640A8791EFF7E1E00258CDE /* ViewController.swift in Sources */,

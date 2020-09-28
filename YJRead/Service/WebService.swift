@@ -36,6 +36,7 @@ final class WebService {
                 return
             }
             loadMock(resource, testJsonData: json, completion: completion)
+            return
         }
         
         URLSession.shared.dataTask(with: resource.url) { data, _, _ in

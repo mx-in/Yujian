@@ -26,14 +26,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1TS-Gq-23Q">
-                                <rect key="frame" x="20" y="151" width="374" height="711"/>
-                                <color key="backgroundColor" name="BackgroundColor"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQ2-hY-kL2" customClass="MainHeaderView" customModule="YJRead" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="88"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
@@ -41,14 +33,22 @@
                                     <constraint firstAttribute="height" constant="88" id="x1K-cK-933"/>
                                 </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5k-s2-SCC" customClass="YJTextView" customModule="YJRead" customModuleProvider="target">
+                                <rect key="frame" x="14" y="142" width="386" height="720"/>
+                                <color key="tintColor" name="BackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" name="TextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="l5k-s2-SCC" secondAttribute="bottom" id="0AB-q2-ZoX"/>
                             <constraint firstItem="WQ2-hY-kL2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2l2-ak-Cjx"/>
-                            <constraint firstAttribute="trailing" secondItem="1TS-Gq-23Q" secondAttribute="trailing" constant="20" id="HQk-8u-VPQ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1TS-Gq-23Q" secondAttribute="bottom" id="WZP-9W-0l0"/>
-                            <constraint firstItem="1TS-Gq-23Q" firstAttribute="top" secondItem="WQ2-hY-kL2" secondAttribute="bottom" constant="19" id="dfx-4e-7QI"/>
-                            <constraint firstItem="1TS-Gq-23Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="k8i-rQ-ceV"/>
+                            <constraint firstItem="l5k-s2-SCC" firstAttribute="top" secondItem="WQ2-hY-kL2" secondAttribute="bottom" constant="10" id="7GE-tK-Q98"/>
+                            <constraint firstAttribute="trailing" secondItem="l5k-s2-SCC" secondAttribute="trailing" constant="14" id="LYk-TS-mps"/>
+                            <constraint firstItem="l5k-s2-SCC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="14" id="hqZ-m2-ZS5"/>
                             <constraint firstItem="WQ2-hY-kL2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x4n-ga-ojc"/>
                             <constraint firstAttribute="trailing" secondItem="WQ2-hY-kL2" secondAttribute="trailing" id="xgj-rb-VnJ"/>
                         </constraints>
@@ -58,7 +58,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="headerView" destination="WQ2-hY-kL2" id="0Lg-tj-RuF"/>
-                        <outlet property="webView" destination="1TS-Gq-23Q" id="gZW-cZ-8nM"/>
+                        <outlet property="textView" destination="l5k-s2-SCC" id="rE8-i4-rZg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -68,7 +68,10 @@
     </scenes>
     <resources>
         <namedColor name="BackgroundColor">
-            <color red="0.94113117459999995" green="0.94884532690000001" blue="0.96076852079999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.94117647058823528" green="0.94901960784313721" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
