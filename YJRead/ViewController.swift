@@ -12,6 +12,7 @@ import WebKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var headerView: MainHeaderView!
     
     var artical: MRYWArticalResource?
 
@@ -38,7 +39,7 @@ class ViewController: UIViewController {
     @IBAction func didClickNextBtn(_ sender: Any) {
     }
     
-    @IBAction func didClickRandomBtn(_ sender: Any) {
+    func didClickRandomBtn(_ sender: Any) {
         WebService().load(MRYWArticalResource.random) { result in
                    guard let artical = result else {
                        return
