@@ -37,6 +37,16 @@ extension MRYWArticalResource {
         let todayAritcalURL = URL(string: "https://interface.meiriyiwen.com//article/today?dev=1")!
         return Resource<MRYWArticalResource>(url: todayAritcalURL)
     }
+    
+    func generateArticalModel() -> ArticalModel {
+        let articalData = data
+        return ArticalModel(date:articalData.date.curr ,
+                            author: articalData.author,
+                            title: articalData.title,
+                            digest: articalData.digest,
+                            paragraphs: articalData.paragraphs() ?? [String](),
+                            wordCnt: articalData.wc)
+    }
 }
 
 extension MRYWArticalData {

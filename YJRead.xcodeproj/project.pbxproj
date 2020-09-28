@@ -13,6 +13,7 @@
 		4640A87C1EFF7E1E00258CDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4640A87A1EFF7E1E00258CDE /* Main.storyboard */; };
 		4640A87E1EFF7E1E00258CDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4640A87D1EFF7E1E00258CDE /* Assets.xcassets */; };
 		4640A8811EFF7E1E00258CDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4640A87F1EFF7E1E00258CDE /* LaunchScreen.storyboard */; };
+		465EBC4D2521982E00BFC0E8 /* ArticalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBC4C2521982E00BFC0E8 /* ArticalModel.swift */; };
 		46BF6DF8252096AB00D4060C /* DataParseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BF6DF7252096AB00D4060C /* DataParseTests.swift */; };
 		46D59544227866110033FA56 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D59543227866110033FA56 /* WebService.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		4640A87D1EFF7E1E00258CDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4640A8801EFF7E1E00258CDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4640A8821EFF7E1E00258CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		465EBC4C2521982E00BFC0E8 /* ArticalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticalModel.swift; sourceTree = "<group>"; };
 		46BF6DF5252096AB00D4060C /* YJReadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YJReadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BF6DF7252096AB00D4060C /* DataParseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParseTests.swift; sourceTree = "<group>"; };
 		46BF6DF9252096AB00D4060C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				46018A3D22817989000D7717 /* MRYWArticalResource.swift */,
+				465EBC4C2521982E00BFC0E8 /* ArticalModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465EBC4D2521982E00BFC0E8 /* ArticalModel.swift in Sources */,
 				46018A3E22817989000D7717 /* MRYWArticalResource.swift in Sources */,
 				4640A8791EFF7E1E00258CDE /* ViewController.swift in Sources */,
 				46D59544227866110033FA56 /* WebService.swift in Sources */,

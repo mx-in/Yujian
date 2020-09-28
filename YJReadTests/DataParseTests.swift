@@ -38,6 +38,18 @@ class DataParseTests: XCTestCase {
             XCTAssertEqual(res?.count, 2)
         }
     }
+    
+    func testModelGenerate() {
+        webServerce.loadMock(MRYWArticalResource.today, testJsonData: jsonStr) { result in
+            let model = result?.generateArticalModel()
+            XCTAssertEqual(model?.author, result?.data.author)
+            XCTAssertEqual(model?.date, result?.data.date.curr)
+            XCTAssertEqual(model?.title, result?.data.title)
+            XCTAssertEqual(model?.digest, result?.data.digest)
+            XCTAssertEqual(model?.paragraphs.count, result?.data.paragraphs()?.count)
+            XCTAssertEqual(model?.wordCnt, result?.data.wc)
+        }
+    }
 
 
 }
