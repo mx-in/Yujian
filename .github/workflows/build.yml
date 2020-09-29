@@ -14,8 +14,8 @@ jobs:
         uses: actions/checkout@master
       - name: Testing
         run: |
-          cd Yujian
-          xcodebuild clean test -project YJRead.xcodeproj -scheme YJRead -destination "${destination}" -enableCodeCoverage YES ONLY_ACTIVE_ARCH=NO
+          cd YJRead
+          xcodebuild clean test -project ./YJRead.xcodeproj -scheme YJRead -destination "${destination}" -enableCodeCoverage YES ONLY_ACTIVE_ARCH=NO
           bash <(curl -s https://codecov.io/bash) -t "${CODECOV_TOKEN}"
         env: 
            destination: ${{ matrix.destination }}
