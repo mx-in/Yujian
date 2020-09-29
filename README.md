@@ -1,6 +1,6 @@
 
 <p align="center">
-<a href="https://travis-ci.org/mx-in/Yujian"><img src="https://img.shields.io/travis/mx-in/Yujian/master.svg"></a>
+<a href="https://github.com/mx-in/Yujian/actions?query=workflow%3Abuild"><img src="https://github.com/mx-in/Yujian/workflows/build/badge.svg?branch=master"></a>
 <a herf="https://codecov.io/gh/mx-in/Yujian"><img src="https://codecov.io/gh/mx-in/Yujian/branch/master/graph/badge.svg"/></a>
 </p>
 
