@@ -14,7 +14,6 @@ jobs:
         uses: actions/checkout@master
       - name: Testing
         run: |
-          cd YJRead
           xcodebuild clean test -project YJRead.xcodeproj -scheme YJRead -destination "${destination}" -enableCodeCoverage YES
           bash <(curl -s https://codecov.io/bash) -t "${CODECOV_TOKEN}"
         env: 
