@@ -25,8 +25,15 @@ class YJTextView: UITextView {
     
     private var textAttributes: [NSAttributedString.Key : Any] {
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 44
-        return [NSAttributedString.Key.paragraphStyle : paragraphStyle]
+        paragraphStyle.lineSpacing = 22
+        
+        
+        return
+            [
+            NSAttributedString.Key.paragraphStyle : paragraphStyle,
+            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),
+            NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.7019607843, green: 0.7019607843, blue: 0.7019607843, alpha: 1)
+            ]
     }
 
     required init?(coder: NSCoder) {
