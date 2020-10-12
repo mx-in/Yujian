@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import WebKit
 
 class ViewController: UIViewController {
 
@@ -31,16 +30,14 @@ class ViewController: UIViewController {
             self.headerView.setModel(artical)
             self.textView.setModel(artical)
         }
-        floatView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        floatView.center = self.view.center
-        self.view.addSubview(floatView)
+        headerView.addSettingTarget(self, action: #selector(didClickSettingBtn(_:)), for: .touchUpInside)
     }
     
-    @IBAction func didClickPreBtn(_ sender: Any) {
-        
-    }
+// MARK: Actions
     
-    @IBAction func didClickNextBtn(_ sender: Any) {
+    @objc func didClickSettingBtn(_ sender: UIButton) {
+        let menu = YJSlideDownMenu()
+        menu.show(in: self.view)
     }
     
     func didClickRandomBtn(_ sender: Any) {

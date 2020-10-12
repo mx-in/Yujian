@@ -40,7 +40,8 @@ class MainHeaderView: UIView {
           return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
     
-    @IBAction func settingBtnDidClick(_ sender: UIButton) {
-        
+    func addSettingTarget(_ target: Any?, action: Selector, for controlEvents: UIControl.Event) {
+        settingBtn.addTarget(target, action: action, for: controlEvents)
     }
+    
 }
