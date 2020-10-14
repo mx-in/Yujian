@@ -31,9 +31,9 @@ class ViewController: UIViewController {
             self.headerView.setModel(artical)
             self.textView.setModel(artical)
         }
-        floatView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        floatView.center = self.view.center
-        self.view.addSubview(floatView)
+//        floatView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+//        floatView.center = self.view.center
+//        self.view.addSubview(floatView)
     }
     
     @IBAction func didClickPreBtn(_ sender: Any) {
