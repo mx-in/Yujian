@@ -36,8 +36,8 @@ class ViewController: UIViewController {
 // MARK: Actions
     
     @objc func didClickSettingBtn(_ sender: UIButton) {
-        let menu = YJSlideDownMenu()
-        menu.show(in: self.view)
+        let menu = SlideDownMenu()
+        menu.show(in: self.view, relativeTo: headerView.settingBtn, preferredEdge: (CGRectEdge.minXEdge, CGRectEdge.maxYEdge))
     }
     
     func didClickRandomBtn(_ sender: Any) {

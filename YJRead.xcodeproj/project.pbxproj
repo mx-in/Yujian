@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		46018A3E22817989000D7717 /* MRYWArticalResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46018A3D22817989000D7717 /* MRYWArticalResource.swift */; };
-		4610A7CA2534ADC5000E93FB /* YJSlideDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4610A7C92534ADC5000E93FB /* YJSlideDownMenu.swift */; };
+		4610A7CA2534ADC5000E93FB /* SlideDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4610A7C92534ADC5000E93FB /* SlideDownMenu.swift */; };
 		461F642125223A3500F2AFA6 /* YJTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461F642025223A3500F2AFA6 /* YJTextView.swift */; };
 		4640A8771EFF7E1E00258CDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4640A8761EFF7E1E00258CDE /* AppDelegate.swift */; };
 		4640A8791EFF7E1E00258CDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4640A8781EFF7E1E00258CDE /* ViewController.swift */; };
@@ -19,8 +19,11 @@
 		465EBC5125219F0E00BFC0E8 /* ArticalModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBC5025219F0E00BFC0E8 /* ArticalModelLoader.swift */; };
 		465EBC5B2521F9C500BFC0E8 /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465EBC5A2521F9C500BFC0E8 /* MainHeaderView.swift */; };
 		465EBC5F2521FADA00BFC0E8 /* MainHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465EBC5E2521FADA00BFC0E8 /* MainHeaderView.xib */; };
+		4684C158253CAFD800A0F006 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4684C157253CAFD800A0F006 /* UIViewExtension.swift */; };
 		469C116E252B892800D358C3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469C116D252B892800D358C3 /* Colors.xcassets */; };
 		46A2C3E525234E6400AA050D /* FloatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A2C3E425234E6400AA050D /* FloatView.swift */; };
+		46BAD13E2539F51D003326CA /* SlideDownMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BAD13D2539F51D003326CA /* SlideDownMenuCell.swift */; };
+		46BAD146253A96E5003326CA /* SlideDownMenuCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BAD145253A96E5003326CA /* SlideDownMenuCollectionView.swift */; };
 		46BF6DF8252096AB00D4060C /* DataParseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BF6DF7252096AB00D4060C /* DataParseTests.swift */; };
 		46D59544227866110033FA56 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D59543227866110033FA56 /* WebService.swift */; };
 /* End PBXBuildFile section */
@@ -37,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		46018A3D22817989000D7717 /* MRYWArticalResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRYWArticalResource.swift; sourceTree = "<group>"; };
-		4610A7C92534ADC5000E93FB /* YJSlideDownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJSlideDownMenu.swift; sourceTree = "<group>"; };
+		4610A7C92534ADC5000E93FB /* SlideDownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideDownMenu.swift; sourceTree = "<group>"; };
 		461F642025223A3500F2AFA6 /* YJTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJTextView.swift; sourceTree = "<group>"; };
 		4640A8731EFF7E1E00258CDE /* YJRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4640A8761EFF7E1E00258CDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,8 +53,11 @@
 		465EBC5025219F0E00BFC0E8 /* ArticalModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticalModelLoader.swift; sourceTree = "<group>"; };
 		465EBC5A2521F9C500BFC0E8 /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		465EBC5E2521FADA00BFC0E8 /* MainHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainHeaderView.xib; sourceTree = "<group>"; };
+		4684C157253CAFD800A0F006 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		469C116D252B892800D358C3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		46A2C3E425234E6400AA050D /* FloatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatView.swift; sourceTree = "<group>"; };
+		46BAD13D2539F51D003326CA /* SlideDownMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideDownMenuCell.swift; sourceTree = "<group>"; };
+		46BAD145253A96E5003326CA /* SlideDownMenuCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideDownMenuCollectionView.swift; sourceTree = "<group>"; };
 		46BF6DF5252096AB00D4060C /* YJReadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YJReadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BF6DF7252096AB00D4060C /* DataParseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParseTests.swift; sourceTree = "<group>"; };
 		46BF6DF9252096AB00D4060C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +82,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46078898253C943100506604 /* SlideDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				4610A7C92534ADC5000E93FB /* SlideDownMenu.swift */,
+				46BAD13D2539F51D003326CA /* SlideDownMenuCell.swift */,
+				46BAD145253A96E5003326CA /* SlideDownMenuCollectionView.swift */,
+			);
+			path = SlideDownMenu;
+			sourceTree = "<group>";
+		};
 		4640A86A1EFF7E1E00258CDE = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +113,7 @@
 		4640A8751EFF7E1E00258CDE /* YJRead */ = {
 			isa = PBXGroup;
 			children = (
+				4684C156253CAFC500A0F006 /* Extension */,
 				465EBC592521F99200BFC0E8 /* View */,
 				465420AF252195C60059AA5C /* Service */,
 				465420AE252195B60059AA5C /* Model */,
@@ -132,13 +149,21 @@
 		465EBC592521F99200BFC0E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				46078898253C943100506604 /* SlideDownMenu */,
 				465EBC5A2521F9C500BFC0E8 /* MainHeaderView.swift */,
 				465EBC5E2521FADA00BFC0E8 /* MainHeaderView.xib */,
 				461F642025223A3500F2AFA6 /* YJTextView.swift */,
 				46A2C3E425234E6400AA050D /* FloatView.swift */,
-				4610A7C92534ADC5000E93FB /* YJSlideDownMenu.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4684C156253CAFC500A0F006 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4684C157253CAFD800A0F006 /* UIViewExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		46BF6DF6252096AB00D4060C /* YJReadTests */ = {
@@ -255,13 +280,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BAD13E2539F51D003326CA /* SlideDownMenuCell.swift in Sources */,
 				461F642125223A3500F2AFA6 /* YJTextView.swift in Sources */,
-				4610A7CA2534ADC5000E93FB /* YJSlideDownMenu.swift in Sources */,
+				4610A7CA2534ADC5000E93FB /* SlideDownMenu.swift in Sources */,
 				46A2C3E525234E6400AA050D /* FloatView.swift in Sources */,
 				465EBC4D2521982E00BFC0E8 /* ArticalModel.swift in Sources */,
 				46018A3E22817989000D7717 /* MRYWArticalResource.swift in Sources */,
 				4640A8791EFF7E1E00258CDE /* ViewController.swift in Sources */,
+				46BAD146253A96E5003326CA /* SlideDownMenuCollectionView.swift in Sources */,
 				46D59544227866110033FA56 /* WebService.swift in Sources */,
+				4684C158253CAFD800A0F006 /* UIViewExtension.swift in Sources */,
 				465EBC5B2521F9C500BFC0E8 /* MainHeaderView.swift in Sources */,
 				4640A8771EFF7E1E00258CDE /* AppDelegate.swift in Sources */,
 				465EBC5125219F0E00BFC0E8 /* ArticalModelLoader.swift in Sources */,
