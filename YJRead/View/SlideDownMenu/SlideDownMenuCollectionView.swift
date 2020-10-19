@@ -32,6 +32,7 @@ class SlideDownMenuCollectionView: UICollectionView {
         layout.minimumLineSpacing = 0
         self.contentInset = UIEdgeInsets(top: SlideMenuFrameData.sideEdge, left: 0, bottom: 0, right: 0)
         self.register(SlideDownMenuCell.self, forCellWithReuseIdentifier: SlideDownMenuCell.identifier)
-        self.backgroundColor = .yellow
+        self.backgroundColor = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1)
+        self.layer.cornerRadius = 12.5
     }
 }

@@ -21,17 +21,27 @@ struct SlideMenuFrameData {
     static let width: CGFloat = 134.0
     static let sideEdge: CGFloat = 13.0
     static let itemSize: CGSize = CGSize(width: itemWidth, height: itemHeight)
+    static let topMargin: CGFloat = 13.0
+}
+
+enum SlideMeunPosition {
+    case leftBottom
+    case rightBottom
 }
 
 class SlideDownMenu: UIView {
 
-    fileprivate var items = [YJSlideDownItem]()
+    fileprivate var items = [YJSlideDownItem]() {
+        didSet {
+            itmesCollectionView.reloadData()
+        }
+    }
     fileprivate let itmesCollectionView = SlideDownMenuCollectionView()
 
     public init(items: [YJSlideDownItem]) {
         super.init(frame: .zero)
-        setup()
         self.items = items
+        setup()
     }
     
     override init(frame: CGRect) {
@@ -44,13 +54,17 @@ class SlideDownMenu: UIView {
         setup()
     }
     
-    func show(in view: UIView, relativeTo positioningView: UIView, preferredEdge: (CGRectEdge, CGRectEdge)) {
+    func show(in view: UIView, relativeTo positioningView: UIView, preferredPosition: SlideMeunPosition) {
         self.frame = view.frame
         view.addSubview(self)
-        updateFrame(relativeTo: positioningView, preferredEdge: preferredEdge)
+        updateFrame(relativeTo: positioningView, preferredPosition: preferredPosition)
     }
     
-    private func updateFrame(relativeTo positioningView: UIView, preferredEdge: (CGRectEdge, CGRectEdge)) {
+    func dismiss() {
+        self.removeFromSuperview()
+    }
+    
+    private func updateFrame(relativeTo positioningView: UIView, preferredPosition: SlideMeunPosition) {
         let itemsCnt = items.count
         let height = CGFloat(itemsCnt) * SlideMenuFrameData.itemHeight
         let verticalEdge = SlideMenuFrameData.sideEdge * 2
@@ -58,9 +72,14 @@ class SlideDownMenu: UIView {
         var origin:CGPoint = .zero
 
         let positionViewFrame = positioningView.globalFrame ?? positioningView.frame
-        if preferredEdge.0 == CGRectEdge.minXEdge, preferredEdge.1 == CGRectEdge.maxYEdge {
+        switch preferredPosition {
+        case .leftBottom:
             origin.x = positionViewFrame.origin.x - SlideMenuFrameData.width
-            origin.y = positionViewFrame.origin.y + positionViewFrame.size.height
+            origin.y = positionViewFrame.origin.y + positionViewFrame.size.height + SlideMenuFrameData.topMargin
+            break
+        case .rightBottom:
+            origin.x = positionViewFrame.origin.x + positionViewFrame.size.width - SlideMenuFrameData.width
+            origin.y = positionViewFrame.origin.y + positionViewFrame.size.height + SlideMenuFrameData.topMargin
         }
         itmesCollectionView.frame = CGRect(x: origin.x, y: origin.y, width: size.width, height: size.height)
     }
@@ -72,18 +91,10 @@ class SlideDownMenu: UIView {
         self.addSubview(itmesCollectionView)
         self.itmesCollectionView.dataSource = self
         
-        let item1 = YJSlideDownItem(title: "item1", icon: UIImage()) {
-            
-        }
-        let item2 = YJSlideDownItem(title: "item1", icon: UIImage()) {
-            
-        }
-        items = [item1, item2]
-        itmesCollectionView.reloadData()
     }
     
     @objc private func didTapView(_ tapGesture: UITapGestureRecognizer) {
-        self.removeFromSuperview()
+        dismiss()
     }
 }
 
