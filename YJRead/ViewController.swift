@@ -18,8 +18,8 @@ class ViewController: UIViewController {
     let loader: ArticalModelLoader = {
         let loader = ArticalModelLoader()
         
-//        loader.webService.isMock = true
-//        loader.webService.testJsonData = jsonStr
+        loader.webService.isMock = true
+        loader.webService.testJsonData = jsonStr
         
         return loader
     }()

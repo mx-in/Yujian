@@ -33,10 +33,10 @@ class SlideDownMenu: UIView {
 
     fileprivate var items = [YJSlideDownItem]() {
         didSet {
-            itmesCollectionView.reloadData()
+            itemsCollectionView.reloadData()
         }
     }
-    fileprivate let itmesCollectionView = SlideDownMenuCollectionView()
+    fileprivate let itemsCollectionView = SlideDownMenuCollectionView()
 
     public init(items: [YJSlideDownItem]) {
         super.init(frame: .zero)
@@ -81,15 +81,25 @@ class SlideDownMenu: UIView {
             origin.x = positionViewFrame.origin.x + positionViewFrame.size.width - SlideMenuFrameData.width
             origin.y = positionViewFrame.origin.y + positionViewFrame.size.height + SlideMenuFrameData.topMargin
         }
-        itmesCollectionView.frame = CGRect(x: origin.x, y: origin.y, width: size.width, height: size.height)
+        itemsCollectionView.frame = CGRect(x: origin.x, y: origin.y, width: size.width, height: size.height)
+        setupShadow()
+    }
+    
+    private func setupShadow() {
+        itemsCollectionView.layer.masksToBounds = false
+        itemsCollectionView.layer.shadowColor = #colorLiteral(red: 0.4784313725, green: 0.4784313725, blue: 0.4784313725, alpha: 0.5).cgColor
+        itemsCollectionView.layer.shadowRadius = 12.5
+        itemsCollectionView.layer.shadowOffset = CGSize(width: 1, height: 1)
+        itemsCollectionView.layer.shadowPath = UIBezierPath(rect: itemsCollectionView.bounds).cgPath
+        itemsCollectionView.layer.shadowOpacity = 1
     }
     
     private func setup() {
         self.backgroundColor = #colorLiteral(red: 0.4117647059, green: 0.4117647059, blue: 0.4117647059, alpha: 0.47)
         self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapView(_:))))
         
-        self.addSubview(itmesCollectionView)
-        self.itmesCollectionView.dataSource = self
+        self.addSubview(itemsCollectionView)
+        self.itemsCollectionView.dataSource = self
         
     }
     

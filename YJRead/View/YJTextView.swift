@@ -26,13 +26,12 @@ class YJTextView: UITextView {
     private var textAttributes: [NSAttributedString.Key : Any] {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 22
-        
-        
+
         return
             [
-            NSAttributedString.Key.paragraphStyle : paragraphStyle,
-            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),
-            NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.7019607843, green: 0.7019607843, blue: 0.7019607843, alpha: 1)
+                NSAttributedString.Key.paragraphStyle : paragraphStyle,
+                NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),
+                NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.4901960784, green: 0.4901960784, blue: 0.4901960784, alpha: 1)
             ]
     }
 
@@ -48,7 +47,6 @@ class YJTextView: UITextView {
     
     private func setup() {
         self.backgroundColor = .clear
-//        self.contentInset
         self.isEditable = false 
     }
     
