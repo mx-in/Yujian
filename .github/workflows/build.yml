@@ -1,3 +1,4 @@
+
 name: build
 
 on: [push, pull_request]
@@ -8,10 +9,8 @@ jobs:
     runs-on: macOS-latest
     strategy:
       matrix:
-        destination: [
-                'iOS Simulator,name=iPhone 8' 
-            ]
-        swift-version: [5.0, 4.2, 4.0]
+        destination: ['platform=iOS Simulator,name=iPhone 8']
+        swift-version: [5.0]
     steps:
       - name: Checkout
         uses: actions/checkout@master
