@@ -24,6 +24,13 @@ struct SlideMenuFrameData {
     static let topMargin: CGFloat = 13.0
 }
 
+struct SlideMenuAnimationData {
+    static let duration = 0.2
+    static let delay = 0.0
+    static let springDamping: CGFloat = 0.8
+    static let spirngVelocity: CGFloat = 15.0
+}
+
 enum SlideMeunPosition {
     case leftBottom
     case rightBottom
@@ -36,7 +43,11 @@ class SlideDownMenu: UIView {
             itemsCollectionView.reloadData()
         }
     }
-    fileprivate let itemsCollectionView = SlideDownMenuCollectionView()
+    fileprivate let itemsCollectionView: SlideDownMenuCollectionView = {
+        let menuCollectionView = SlideDownMenuCollectionView()
+        menuCollectionView.layer.anchorPoint = CGPoint(x: 1.0, y: 0.0) // support top right -> bottom left animation style
+        return menuCollectionView
+    }()
 
     public init(items: [YJSlideDownItem]) {
         super.init(frame: .zero)
@@ -57,11 +68,39 @@ class SlideDownMenu: UIView {
     func show(in view: UIView, relativeTo positioningView: UIView, preferredPosition: SlideMeunPosition) {
         self.frame = view.frame
         view.addSubview(self)
+        
         updateFrame(relativeTo: positioningView, preferredPosition: preferredPosition)
+        setupShadow()
+        addShowAnimation()
     }
     
     func dismiss() {
-        self.removeFromSuperview()
+        UIView.animate(withDuration: SlideMenuAnimationData.duration,
+                                delay: SlideMenuAnimationData.delay,
+                                usingSpringWithDamping: SlideMenuAnimationData.springDamping,
+                                initialSpringVelocity: SlideMenuAnimationData.spirngVelocity,
+                                options: .curveEaseOut) {
+            self.alpha = 0.0
+            self.itemsCollectionView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        } completion: { completion in
+            self.removeFromSuperview()
+        }
+    }
+    
+    private func addShowAnimation() {
+        itemsCollectionView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        itemsCollectionView.alpha = 0.0
+        UIView.animate(withDuration: SlideMenuAnimationData.duration,
+                       delay: SlideMenuAnimationData.delay,
+                       usingSpringWithDamping: SlideMenuAnimationData.springDamping,
+                       initialSpringVelocity: SlideMenuAnimationData.spirngVelocity,
+                       options: .curveEaseIn) {
+            self.itemsCollectionView.alpha = 1.0
+            self.itemsCollectionView.transform = CGAffineTransform.identity
+        }
+    }
+    
+    private func addDismissAnimation() {
     }
     
     private func updateFrame(relativeTo positioningView: UIView, preferredPosition: SlideMeunPosition) {
@@ -82,7 +121,6 @@ class SlideDownMenu: UIView {
             origin.y = positionViewFrame.origin.y + positionViewFrame.size.height + SlideMenuFrameData.topMargin
         }
         itemsCollectionView.frame = CGRect(x: origin.x, y: origin.y, width: size.width, height: size.height)
-        setupShadow()
     }
     
     private func setupShadow() {
