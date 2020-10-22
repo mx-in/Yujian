@@ -82,7 +82,7 @@ class SlideDownMenu: UIView {
                                 options: .curveEaseOut) {
             self.alpha = 0.0
             self.itemsCollectionView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-        } completion: { completion in
+        } completion: { _ in
             self.removeFromSuperview()
         }
     }
