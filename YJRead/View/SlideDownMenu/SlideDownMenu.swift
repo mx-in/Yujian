@@ -133,12 +133,13 @@ class SlideDownMenu: UIView {
     }
     
     private func setup() {
-        self.backgroundColor = #colorLiteral(red: 0.4117647059, green: 0.4117647059, blue: 0.4117647059, alpha: 0.47)
-        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapView(_:))))
+        backgroundColor = #colorLiteral(red: 0.4117647059, green: 0.4117647059, blue: 0.4117647059, alpha: 0.47)
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapView(_:))))
+        
+        itemsCollectionView.dataSource = self
+        itemsCollectionView.delegate = self
         
         self.addSubview(itemsCollectionView)
-        self.itemsCollectionView.dataSource = self
-        
     }
     
     @objc private func didTapView(_ tapGesture: UITapGestureRecognizer) {
@@ -156,7 +157,17 @@ extension SlideDownMenu: UICollectionViewDataSource {
         cell.setItem(items[indexPath.row])
         return cell
     }
+}
 
+extension SlideDownMenu: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor.yellow
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        
+    }
 }
 
 
